@@ -17,4 +17,13 @@
 - project developement
 
 ## 📅 2025-04-23
-- Retriving data
+- Retrieving data
+
+## 📅 2025-04-24
+- Suddivisione del progetto in 4 task
+  - 2 persone analisi dati
+  - 1 monte carlo simulation
+  - 1 LLM implementation
+
+## 📅 2025-05-14
+- Project work 
