@@ -8,12 +8,12 @@
   - Option 2: Web front end + Python package + Monte Carlo simulation
 - Chosen general theme: spatial data analysis.
 - Started the structure of the GitHub repository.
-
+---
 **Date:** April 10 - 14, 2025
 - Second meeting.
 - Github implementation.
 - project developement
-
+---
 **Date:** April 23-24, 2025
 - Retrieving data
 - Project subdivision in 4 task
