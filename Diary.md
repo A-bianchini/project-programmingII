@@ -16,7 +16,7 @@
 ---
 **Date:** April 23-24, 2025
 - Retrieving data
-- Project subdivision in 4 task
+- Project break down in 4 task
   - 2 p data analysis
   - 1 p Monte Carlo simulation
   - 1 p LLM implementation
