@@ -1,8 +1,7 @@
 # Development log – Project programming II
 
 # Phase 0: Project start
-**Date:** April 9, 2025
-- Initial meeting.
+**Date:** April 9, 2025 Initial meeting.
 - Defined the components: Dataset + Database + Visualization.
 - Two possible project approaches:
   - Option 1: Web scraping + Linux cron + Monte Carlo simulation
@@ -10,11 +9,9 @@
 - Chosen general theme: spatial data analysis.
 - Started the structure of the GitHub repository.
 
-**Date:** April 10, 2025
+**Date:** April 10 - 14, 2025
 - Second meeting.
 - Github implementation.
-
-**Date:** April 14, 2025
 - project developement
 
 **Date:** April 23-24, 2025
