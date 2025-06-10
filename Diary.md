@@ -1,6 +1,6 @@
 # Development log – Project programming II
 
-# Phase 0: Project start
+### Phase 0: Project start
 **Date:** April 9, 2025 Initial meeting.
 - Defined the components: Dataset + Database + Visualization.
 - Two possible project approaches:
