@@ -31,8 +31,20 @@
         /* puoi anche usare width: 100% per tutta la larghezza */
     }
 
+    .grafico {
+      float: left;              /* l’immagine si “incolla” a sinistra */
+      margin: 0 1rem 1rem 0;     /* spazio intorno (dx, sotto) */
+      width: 300px;             /* o max-width:100% per renderla responsive */
+    }
+
     p {
-      line-height: 1.6;              /* Altezza riga per i paragrafi */
+      text-align: justify;;              /* Altezza riga per i paragrafi */
+    }
+
+    .clearfix::after {
+      content: "";
+      display: table;
+      clear: both;
     }
   </style>
 </head>
@@ -43,7 +55,7 @@
   <!-- Sottotitolo -->
   <h2>Atmospheric pollution analysis</h2>
   <hr class="separator">
-  <img src="graphics/traffic.png" alt="Grafico traffico veicoli">
+  <img class="grafico" src="graphics/traffic.png" alt="Grafico traffico veicoli">
 
   <!-- Paragrafo di esempio -->
   <p>
