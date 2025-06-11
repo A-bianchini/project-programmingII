@@ -30,10 +30,17 @@
     width: 50%;                  /* lunghezza lineare: metà del contenitore */
         /* puoi anche usare width: 100% per tutta la larghezza */
     }
-
+    .grafico {
+    float: left;
+    margin: 0 1rem 1rem 0;
+    width: 300px;           /* o max-width: 100% per responsività */
+    }
     p {
       text-align: justify;              /* Altezza riga per i paragrafi */
     }
+    .under-graphic {
+    clear: left;            /* oppure clear: both; se hai fluttuazioni su entrambi i lati */
+  }
   </style>
 </head>
 <body>
@@ -46,7 +53,7 @@
   <img src="graphics/traffic.png" alt="Grafico traffico veicoli">
 
   <!-- Paragrafo di esempio -->
-  <p>
+  <p class="under-graphic">
     Here is the first paragraph of the Ticino Pollution project. This project aims to analyze atmospheric pollution in the Ticino region, focusing on various pollutants and their impact on the environment and public health.
     The data collected will help in understanding pollution patterns and developing strategies for improvement.
   </p></body>
