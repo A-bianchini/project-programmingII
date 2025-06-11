@@ -62,6 +62,37 @@
     color: #555;
     margin-top: 0.25rem;
   }
+    /* ––– contesto flex per grafico + descrizione ––– */
+    .chart-container {
+      display: flex;
+      align-items: flex-start;   /* allinea in alto */
+      gap: 1rem;                 /* spazio orizzontale */
+      margin-bottom: 1.5rem;
+    }
+    /* rimuovi float precedenti: usa solo responsive width */
+    .chart-container img {
+      max-width: 50%;            /* metà larghezza del contenitore */
+      height: auto;
+      display: block;
+    }
+    .chart-desc {
+      max-width: 45%;            /* lasci spazio al grafico */
+      text-align: justify;
+      line-height: 1.5;
+      font-size: 1rem;
+      color: #333;
+    }
+
+    /* su schermi stretti metti la descrizione sotto */
+    @media (max-width: 600px) {
+      .chart-container {
+        flex-direction: column;
+      }
+      .chart-container img,
+      .chart-desc {
+        max-width: 100%;
+      }
+    }
   </style>
 </head>
 <body>
@@ -72,6 +103,11 @@
   <h2>Atmospheric pollution analysis - graph 1</h2>
   <hr class="separator">
   <img src="graphics/traffic.png" alt="Grafico traffico veicoli">
+    <p class="under-graphic">
+    Here is the first description of the graph. This project aims to analyse pollutants and their impact on the environment and public health.
+    The data collected will help in understanding pollution patterns and developing strategies for improvement.
+    </p>
+
 
    <h3>Atmospheric pollution analysis - graph 2</h2>
     <hr class="separator">
