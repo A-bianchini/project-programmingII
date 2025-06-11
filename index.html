@@ -36,7 +36,6 @@
     max-width: 100%;           /* o max-width: 100% per responsività */
     }
     p {
-      font-size: 1rem;              /* Dimensione del testo del paragrafo */
       text-align: justify;              /* Altezza riga per i paragrafi */
     }
     .under-graphic {
@@ -44,9 +43,8 @@
     width: 60%;            /* oppure clear: both; se hai fluttuazioni su entrambi i lati */
   }
 
-    p {
-    font-size: 0.75rem;     /* misura assoluta: 0.75rem è 75% di 16px = 12px */
-    line-height: 1.4;
+    .small-text {
+    font-size: 0.75rem;    /* 75% di 16px = 12px */
     color: #555;
     margin-top: 0.25rem;
   }
@@ -66,7 +64,7 @@
     Here is the first paragraph of the Ticino Pollution project. This project aims to analyze atmospheric pollution in the Ticino region, focusing on various pollutants and their impact on the environment and public health.
     The data collected will help in understanding pollution patterns and developing strategies for improvement.
   </p>
-  <p>
+  <p class="small-text">
     The data has been collected from the OASI web site
   </p></body>
 </html>
