@@ -7,21 +7,28 @@
     <style>
     body {
       font-family: Arial, sans-serif; /* Font di default */
-      color: #2D4F2B;                   /* Colore del testo normale */
+      color: #000000;                   /* Colore del testo normale */
       margin: 2rem;
     }
 
     h1 {
       font-size: 2.5rem;             /* Dimensione del titolo */
-      color: #FFB823;                /* Colore del */
+      color: #0ABAB5;                /* Colore del */
       margin-bottom: 0.5rem;
     }
 
     h2 {
       font-size: 1.75rem;            /* Dimensione del sottotitolo */
-      color: #708A58;                /* Colore del sottotitolo */
+      color: #56DFCF;                /* Colore del sottotitolo */
       margin-top: 1.5rem;
       margin-bottom: 0.5rem;
+    }
+    .separator {
+    border: none;                /* rimuove il bordo di default */
+    border-top: 2px solid #ADEED9; /* linea superiore di 2px, colore coordinato con h2 */
+    margin: 1rem 0;              /* spazio sopra e sotto */
+    width: 50%;                  /* lunghezza lineare: metà del contenitore */
+        /* puoi anche usare width: 100% per tutta la larghezza */
     }
 
     p {
@@ -35,6 +42,7 @@
 
   <!-- Sottotitolo -->
   <h2>Atmospheric pollution analysis</h2>
+  <hr class="separator">
   <img src="graphics/traffic.png" alt="Grafico traffico veicoli">
 
   <!-- Paragrafo di esempio -->
