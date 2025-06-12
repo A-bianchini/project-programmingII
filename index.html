@@ -103,25 +103,40 @@
   <h2>Atmospheric pollution analysis - graph 1</h2>
   <hr class="separator">
 
-  <div class="chart-container">
-  <img src="pacchetto_python/graphics/Evolution of Traffic and Air Pollutants in Ticino (2020-2023).png" alt="Evolution of Traffic and Air Pollutants in Ticino (2020-2023)">
-<!-- descrizione affiancata -->
-    <div class="chart-desc">
-      <script>
+<div class="chart-container">
+  <img
+    src="pacchetto_python/graphics/Evolution of Traffic and Air Pollutants in Ticino (2020-2023).png"
+    alt="Evolution of Traffic and Air Pollutants in Ticino (2020-2023)"
+    aria-describedby="chartDescription"
+  >
+
+  <!-- IL CONTENITORE VERO: qui mettiamo l’ID -->
+  <div class="chart-desc" id="chartDescription">
+    Caricamento descrizione…
+  </div>
+</div>
+
+<script>
+  // deve trovare il div con quell’ID, non il tag script
   fetch('ALL-2025-06-12.html')
     .then(res => res.text())
     .then(html => {
-      // parse del file e estrazione di <article>
       const tmp = document.createElement('div');
       tmp.innerHTML = html;
       const article = tmp.querySelector('article');
-      // inietto solo il contenuto interno di <article> dentro la descrizione
-      document.getElementById('chartDescription').innerHTML = article.innerHTML;
+      document.getElementById('chartDescription').innerHTML =
+        article ? article.innerHTML : 'Nessun <article> trovato';
     })
-    .catch(err => console.error('Impossibile caricare la descrizione:', err));
+    .catch(err => {
+      console.error(err);
+      document.getElementById('chartDescription').textContent =
+        'Errore nel caricamento della descrizione.';
+    });
 </script>
-    </div>
-  </div>
+
+
+
+
 <canvas id="myChart"></canvas>
 <div id="chartDescription"></div>
 
