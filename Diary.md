@@ -125,15 +125,24 @@
 2. Optional integration of parametrized meteorological variables
 3. Outputs structured for easy export to visualization tools
 
-**Resolved challenges:**
+**Overcommed challenges:**
 
 * Seed control for reproducibility
 * User input validation
 * Modular design for future enhancements
 
 ---
+### **Phase 8: Project refining and final testing
 
-By this stage, the project has established a **solid technical foundation**, meeting the minimum requirements: a **Python package** with **Monte Carlo simulation** capabilities.
+**Date:** June, 2025
+**LLM + frontend implementation** 
+
+**Features:**
+
+1. Local LLM choice and downloading (Gemma 2)
+2. Iplementation of Github Pages for a static front end
+3. DifFerent project parts merging
+4. Script testing and debugging
 
 ---
 
