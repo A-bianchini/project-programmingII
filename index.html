@@ -104,7 +104,7 @@
   <hr class="separator">
 
   <div class="chart-container">
-  <img src="graphics/traffic.png" alt="Grafico traffico veicoli">
+  <img src="pacchetto_python/graphics/Evolution of Traffic and Air Pollutants in Ticino (2020-2023).png" alt="Evolution of Traffic and Air Pollutants in Ticino (2020-2023)">
 <!-- descrizione affiancata -->
     <div class="chart-desc">
       Questo grafico mostra l’andamento orario del traffico veicolare nella regione Ticino.
@@ -113,6 +113,30 @@
       dal sito OASI e rappresentano il numero di veicoli transitati ogni ora.
     </div>
   </div>
+<canvas id="myChart"></canvas>
+<div id="chartDescription"></div>
+
+
+
+<script>
+  fetch('ALL-2025-06-12.html')
+    .then(res => res.text())
+    .then(html => {
+      // “parser” per isolare solo <article> e i suoi figli
+      const tmp = document.createElement('div');
+      tmp.innerHTML = html;
+      const article = tmp.querySelector('article');
+      document.getElementById('chartDescription').innerHTML = article.innerHTML;
+    })
+    .catch(err => console.error('Impossibile caricare la descrizione:', err));
+</script>
+
+
+
+
+
+
+
 
   <h3>Atmospheric pollution analysis - graph 2</h3>
     <hr class="separator">
