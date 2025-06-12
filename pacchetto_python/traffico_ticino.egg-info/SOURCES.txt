@@ -1,0 +1,71 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+traffico_ticino/__init__.py
+traffico_ticino/loader.py
+traffico_ticino/simulation.py
+traffico_ticino/summary.py
+traffico_ticino.egg-info/PKG-INFO
+traffico_ticino.egg-info/SOURCES.txt
+traffico_ticino.egg-info/dependency_links.txt
+traffico_ticino.egg-info/requires.txt
+traffico_ticino.egg-info/top_level.txt
+traffico_ticino/data/all/AS_all.csv
+traffico_ticino/data/all/NO2_all.csv
+traffico_ticino/data/all/O3_all.csv
+traffico_ticino/data/all/PM10_all.csv
+traffico_ticino/data/all/SP_all.csv
+traffico_ticino/data/coefficients/meteo.json
+traffico_ticino/data/coefficients/meteo_by_month.csv
+traffico_ticino/data/coefficients/meteo_mensile.csv
+traffico_ticino/data/coefficients/meteo_mensile_media_ticino.csv
+traffico_ticino/data/coefficients/pooled.json
+traffico_ticino/data/media/AS_media.csv
+traffico_ticino/data/media/NO2_media.csv
+traffico_ticino/data/media/O3_media.csv
+traffico_ticino/data/media/PM10_media.csv
+traffico_ticino/data/media/SP_media.csv
+traffico_ticino/data/media/air.csv
+traffico_ticino/data/media/traffic_media.csv
+traffico_ticino/data/meteo_mensile/airolo_meteo_mensile.csv
+traffico_ticino/data/meteo_mensile/bioggio_meteo_mensile.csv
+traffico_ticino/data/meteo_mensile/chiasso_meteo_mensile.csv
+traffico_ticino/data/meteo_mensile/giubiasco_meteo_mensile.csv
+traffico_ticino/data/meteo_mensile/locarno_meteo_mensile.csv
+traffico_ticino/data/meteo_mensile/mendrisio_meteo_mensile.csv
+traffico_ticino/data/meteo_mensile/minusio_meteo_mensile.csv
+traffico_ticino/data/meteo_mensile/pregassona_meteo_mensile.csv
+traffico_ticino/data/stazioni singole/O3_only/Airolo_O3_only.csv
+traffico_ticino/data/stazioni singole/O3_only/Bioggio_O3_only.csv
+traffico_ticino/data/stazioni singole/O3_only/Chiasso_O3_only.csv
+traffico_ticino/data/stazioni singole/O3_only/Giubiasco_O3_only.csv
+traffico_ticino/data/stazioni singole/O3_only/Locarno_O3_only.csv
+traffico_ticino/data/stazioni singole/O3_only/Mendrisio_O3_only.csv
+traffico_ticino/data/stazioni singole/O3_only/Minusio_O3_only.csv
+traffico_ticino/data/stazioni singole/O3_only/Pregassona_O3_only.csv
+traffico_ticino/data/stazioni singole/noO3/Airolo_noO3.csv
+traffico_ticino/data/stazioni singole/noO3/Bioggio_noO3.csv
+traffico_ticino/data/stazioni singole/noO3/Chiasso_noO3.csv
+traffico_ticino/data/stazioni singole/noO3/Giubiasco_noO3.csv
+traffico_ticino/data/stazioni singole/noO3/Locarno_noO3.csv
+traffico_ticino/data/stazioni singole/noO3/Mendrisio_noO3.csv
+traffico_ticino/data/stazioni singole/noO3/Minusio_noO3.csv
+traffico_ticino/data/stazioni singole/noO3/Pregassona_noO3.csv
+traffico_ticino/data/stazioni singole/pollution_noO3/Airolo_pollution_noO3.csv
+traffico_ticino/data/stazioni singole/pollution_noO3/Bioggio_pollution_noO3.csv
+traffico_ticino/data/stazioni singole/pollution_noO3/Chiasso_pollution_noO3.csv
+traffico_ticino/data/stazioni singole/pollution_noO3/Giubiasco_pollution_noO3.csv
+traffico_ticino/data/stazioni singole/pollution_noO3/Locarno_pollution_noO3.csv
+traffico_ticino/data/stazioni singole/pollution_noO3/Mendrisio_pollution_noO3.csv
+traffico_ticino/data/stazioni singole/pollution_noO3/Minusio_pollution_noO3.csv
+traffico_ticino/data/stazioni singole/pollution_noO3/Pregassona_pollution_noO3.csv
+traffico_ticino/data/stazioni singole/traffic_only/Airolo_traffic_only.csv
+traffico_ticino/data/stazioni singole/traffic_only/Bioggio_traffic_only.csv
+traffico_ticino/data/stazioni singole/traffic_only/Chiasso_traffic_only.csv
+traffico_ticino/data/stazioni singole/traffic_only/Giubiasco_traffic_only.csv
+traffico_ticino/data/stazioni singole/traffic_only/Locarno_traffic_only.csv
+traffico_ticino/data/stazioni singole/traffic_only/Mendrisio_traffic_only.csv
+traffico_ticino/data/stazioni singole/traffic_only/Minusio_traffic_only.csv
+traffico_ticino/data/stazioni singole/traffic_only/Pregassona_traffic_only.csv

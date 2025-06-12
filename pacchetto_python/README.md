@@ -1,0 +1,133 @@
+## `traffico_ticino` – Air Pollution and Traffic Analysis in Southern Switzerland
+
+`traffico_ticino` is a Python package designed to analyze the relationship between vehicular traffic and air pollution in the Canton of Ticino, Switzerland.  
+It combines observed data from environmental monitoring stations with meteorological inputs and provides forecasting tools for future pollution scenarios under different traffic evolution assumptions.
+
+---
+
+### Key Features
+
+- Regression analysis linking traffic intensity to pollutants and weather variables.
+- Monte Carlo simulations of future pollution under customizable traffic trends (e.g., linear growth, historical patterns, green mobility).
+- Visualization tools for diagnostics and station comparisons.
+- Organized access to structured datasets at multiple spatial and temporal resolutions.
+
+---
+
+## Installation
+
+You can install the package locally by cloning the repository and running:
+
+```bash
+pip install .
+```
+
+Make sure you are using a Python environment with the following packages installed:
+- pandas
+- numpy
+- seaborn
+- matplotlib
+- statsmodels
+
+---
+
+## Modules Overview
+
+### `summary()` Function
+
+The `summary()` function provides a flexible interface to run OLS regressions of pollutants on traffic data and meteorological conditions for selected monitoring stations in Ticino, Switzerland. It supports textual summaries and graphical diagnostics, as well as comparisons across stations and pollutants.
+
+#### Parameters
+
+| Parameter     | Type              | Default    | Description |
+|---------------|-------------------|------------|-------------|
+| `station`     | `str` or `list`   | `"all"`    | Station name (e.g., `"Airolo"`) or list of names. `"all"` includes all available stations. |
+| `show`        | `str`             | `"ols"`    | Output type: `"ols"`, `"graphic"`, or `"all"`. |
+| `pollutants`  | `str` or `list`   | `"all"`    | Target pollutants. `"all"` includes: `["no", "no2", "nox", "pm10"]`. |
+| `comparison`  | `bool`            | `True`     | Whether to show summary tables and comparisons. |
+
+#### Example
+
+```python
+from summary import summary
+summary(station=["Airolo", "Bioggio"], show="all", pollutants=["no2", "pm10"])
+```
+
+---
+
+### `monte_verita_simulation()` Function
+
+Simulates future pollutant concentrations under different traffic evolution scenarios using Monte Carlo methods.
+
+#### Parameters
+
+| Parameter        | Type     | Default | Description |
+|------------------|----------|---------|-------------|
+| `df`             | `DataFrame` | Required | Input with `date`, traffic, and pollutant columns. |
+| `variable`       | `str`    | Required | Pollutant to simulate (e.g., `"no2"`). |
+| `trend_type`     | `str`    | `"historical"` | One of: `"historical"`, `"historical_modified"`, `"linear"`, `"exponential"`, `"manual"`. |
+| `growth_rate`    | `float`  | `0.02`  | Used for exponential trend (e.g., `0.007974` = 10%/year monthly). |
+| `n_periods`      | `int`    | `48`    | Number of simulation periods. |
+| `n_simulations`  | `int`    | `1000`  | Number of Monte Carlo draws. |
+| `meteo_csv_path` | `str`    | Optional | CSV with monthly average temperature, wind, rain. |
+
+####  Example
+
+```python
+from traffico_ticino.simulation import monte_verita_simulation
+
+sim_df = monte_verita_simulation(
+    df=df_bioggio_full,
+    variable="no2",
+    traffic_col="traffic",
+    trend_type="exponential",
+    growth_rate=0.007974,
+    n_periods=60,
+    meteo_csv_path="data/meteo_mensile/bioggio_meteo_mensile.csv",
+    coef_json_path="data/coefficients/pooled.json"
+)
+```
+
+---
+
+### `load_dataset()` Function
+
+Helper function to load datasets from the `data/` folder, including subdirectories and station-specific files.
+
+#### Parameters
+
+| Parameter          | Type    | Description |
+|--------------------|---------|-------------|
+| `nome_file`        | `str`   | Base name of the file (without `.csv`). |
+| `sottocartella`    | `str`   | Subfolder under `data/`. |
+| `stazione_singola` | `bool`  | If `True`, loads from `data/stazioni singole/<sottocartella>`. |
+
+####  Example
+
+```python
+from traffico_ticino.loader import load_dataset
+
+df = load_dataset("O3_media", "media")
+df_station = load_dataset("BIASCA_traffic_only", "traffic_only", stazione_singola=True)
+```
+
+---
+
+###  Project Directory Structure
+
+```
+traffico_ticino/
+├── data/
+│   ├── media/
+│   ├── all/
+│   └── stazioni singole/
+│       ├── traffic_only/
+│       ├── noO3/
+│       └── ...
+├── summary.py
+├── simulation.py
+├── loader.py
+└── ...
+```
+
+---
