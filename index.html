@@ -37,6 +37,13 @@
       margin-top: 1.5rem;
       margin-bottom: 0.5rem;
     }
+
+    h5 {
+      font-size: 1.75rem;            /* Dimensione del sottotitolo */
+      color: #85A947;                /* Colore del sottotitolo */
+      margin-top: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
     .separator {
     border: none;                /* rimuove il bordo di default */
     border-top: 2px solid #EFE3C2; /* linea superiore di 2px, colore coordinato con h2 */
@@ -100,9 +107,43 @@
   <h1>Welcome in the Ticino Pollution project</h1>
 
   <!-- Sottotitolo -->
-  <h2>Atmospheric pollution analysis - graph 1</h2>
+  <h2>Mean monthly traffic heatmap</h2>
   <hr class="separator">
 
+<div class="chart-container">
+  <img
+    src="pacchetto_python/graphics/Mean monthly traffic heatmap.png"
+    alt="Mean monthly traffic heatmap"
+    aria-describedby="chartDescription"
+  >
+
+  <!-- IL CONTENITORE VERO: qui mettiamo l’ID -->
+  <div class="chart-desc" id="chartDescription">
+    Caricamento descrizione…
+  </div>
+</div>
+
+<script>
+  // deve trovare il div con quell’ID, non il tag script
+  fetch('pacchetto_python/docs/traffic-2025-06-12.html')
+    .then(res => res.text())
+    .then(html => {
+      const tmp = document.createElement('div');
+      tmp.innerHTML = html;
+      const article = tmp.querySelector('article');
+      document.getElementById('chartDescription').innerHTML =
+        article ? article.innerHTML : 'Nessun <article> trovato';
+    })
+    .catch(err => {
+      console.error(err);
+      document.getElementById('chartDescription').textContent =
+        'Errore nel caricamento della descrizione.';
+    });
+</script>
+
+  <h3>Evolution of Traffic and Air Pollutants in Ticino (2020-2023)</h3>
+    <hr class="separator">
+  
 <div class="chart-container">
   <img
     src="pacchetto_python/graphics/Evolution of Traffic and Air Pollutants in Ticino (2020-2023).png"
@@ -134,42 +175,75 @@
     });
 </script>
 
-
-
-
-<canvas id="myChart"></canvas>
-<div id="chartDescription"></div>
-
-  <h3>Atmospheric pollution analysis - graph 2</h3>
-    <hr class="separator">
-  
-    <div class="chart-container">
-
-  <!-- Grafico statico PNG -->
-  <img src="graphics/traffic2.png" alt="Grafico traffico veicoli">
-    <div class="chart-desc">
-      Questo grafico numero 2 mostra l’andamento orario del traffico veicolare nella regione Ticino.
-      Si osservano due picchi principali: uno al mattino tra le 8:00–9:00 e uno al pomeriggio
-      tra le 17:00–18:00, corrispondenti agli orari di punta. I dati sono stati raccolti
-      dal sito OASI e rappresentano il numero di veicoli transitati ogni ora.
-    </div>
-  </div>
-
-
-
-
-  <h4>Atmospheric pollution analysis - graph 3</h4>
+  <h4>Concentration of NO₂ in Ticino</h4>
     <hr class="separator">
   <div class="chart-container">
-  <!-- Grafico statico PNG -->
-  <img src="graphics/traffic3.png" alt="Grafico traffico veicoli">
+  <img
+    src="pacchetto_python/graphics/Concentration of NO₂ in Ticino.png"
+    alt="Concentration of NO₂ in Ticino"
+    aria-describedby="chartDescription"
+  >
 
-  <!-- Paragrafo di esempio -->
-    <div class="chart-desc">
-      Here is the first paragraph of the Ticino Pollution project. This project aims to analyze atmospheric pollution in the Ticino region, focusing on various pollutants and their impact on the environment and public health.
-      The data collected will help in understanding pollution patterns and developing strategies for improvement.
-    </div>
+  <!-- IL CONTENITORE VERO: qui mettiamo l’ID -->
+  <div class="chart-desc" id="chartDescription">
+    Caricamento descrizione…
   </div>
+</div>
+
+<script>
+  // deve trovare il div con quell’ID, non il tag script
+  fetch('pacchetto_python/docs/no2-2025-06-12.html')
+    .then(res => res.text())
+    .then(html => {
+      const tmp = document.createElement('div');
+      tmp.innerHTML = html;
+      const article = tmp.querySelector('article');
+      document.getElementById('chartDescription').innerHTML =
+        article ? article.innerHTML : 'Nessun <article> trovato';
+    })
+    .catch(err => {
+      console.error(err);
+      document.getElementById('chartDescription').textContent =
+        'Errore nel caricamento della descrizione.';
+    });
+</script>
+
+  <h5>Montecarlo simulation - exponential growth of NO2 in Bioggio</h5>
+    <hr class="separator">
+  <div class="chart-container">
+  <img
+    src="pacchetto_python/graphics/Montecarlo simulation - exponential growth of NO2 in Bioggio.png"
+    alt="Montecarlo simulation - exponential growth of NO2 in Bioggio"
+    aria-describedby="chartDescription"
+  >
+
+  <!-- IL CONTENITORE VERO: qui mettiamo l’ID -->
+  <div class="chart-desc" id="chartDescription">
+    Caricamento descrizione…
+  </div>
+</div>
+
+<script>
+  // deve trovare il div con quell’ID, non il tag script
+  fetch('pacchetto_python/docs/monte_growth_bioggio-2025-06-12.html')
+    .then(res => res.text())
+    .then(html => {
+      const tmp = document.createElement('div');
+      tmp.innerHTML = html;
+      const article = tmp.querySelector('article');
+      document.getElementById('chartDescription').innerHTML =
+        article ? article.innerHTML : 'Nessun <article> trovato';
+    })
+    .catch(err => {
+      console.error(err);
+      document.getElementById('chartDescription').textContent =
+        'Errore nel caricamento della descrizione.';
+    });
+</script>
+
+
+
+
   <p class="small-text">
     The data has been collected from the OASI web site
   </p></body>
