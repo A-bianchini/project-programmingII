@@ -9,4 +9,5 @@ The project also incorporates predictive modeling techniques, including Monte Ca
 
 The project showcases how a combination of modern programming tools and statistical techniques can help address real-world problems in a meaningful and scalable way.
 
-https://a-bianchini.github.io/project-programmingII/
+---
+Link to Github pages https://a-bianchini.github.io/project-programmingII/
