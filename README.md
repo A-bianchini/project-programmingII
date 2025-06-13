@@ -8,3 +8,5 @@ Our central research question is: how does traffic impact the environment and so
 The project also incorporates predictive modeling techniques, including Monte Carlo simulation, to explore future trends and scenarios. Results are presented through a web interface and summaries generated with a local large language model (LLM). 
 
 The project showcases how a combination of modern programming tools and statistical techniques can help address real-world problems in a meaningful and scalable way.
+
+https://a-bianchini.github.io/project-programmingII/
