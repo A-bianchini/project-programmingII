@@ -6,91 +6,90 @@
     <title>Ticino sample page</title>
     <style>
     body {
-      font-family: Arial, sans-serif; /* Font di default */
-      color: #000000;                   /* Colore del testo normale */
+      font-family: Arial, sans-serif; 
+      color: #000000;                   
       margin: 2rem;
     }
 
     h1 {
-      font-size: 2.5rem;             /* Dimensione del titolo */
-      color: #3E7B27;                /* Colore del */
+      font-size: 2.5rem;           
+      color: #3E7B27;              
       margin-bottom: 0.5rem;
     }
 
     h2 {
-      font-size: 1.75rem;            /* Dimensione del sottotitolo */
-      color: #85A947;                /* Colore del sottotitolo */
+      font-size: 1.75rem;            
+      color: #85A947;                
       margin-top: 1.5rem;
       margin-bottom: 0.5rem;
     }
 
      h3 {
-      font-size: 1.75rem;            /* Dimensione del sottotitolo */
-      color: #85A947;                /* Colore del sottotitolo */
+      font-size: 1.75rem;            
+      color: #85A947;                
       margin-top: 1.5rem;
       margin-bottom: 0.5rem;
     }
 
     h4 {
-      font-size: 1.75rem;            /* Dimensione del sottotitolo */
-      color: #85A947;                /* Colore del sottotitolo */
+      font-size: 1.75rem;            
+      color: #85A947;               
       margin-top: 1.5rem;
       margin-bottom: 0.5rem;
     }
 
     h5 {
-      font-size: 1.75rem;            /* Dimensione del sottotitolo */
-      color: #85A947;                /* Colore del sottotitolo */
+      font-size: 1.75rem;            
+      color: #85A947;                
       margin-top: 1.5rem;
       margin-bottom: 0.5rem;
     }
     .separator {
-    border: none;                /* rimuove il bordo di default */
-    border-top: 2px solid #EFE3C2; /* linea superiore di 2px, colore coordinato con h2 */
-    margin: 1rem 0;              /* spazio sopra e sotto */
-    width: 50%;                  /* lunghezza lineare: metà del contenitore */
-        /* puoi anche usare width: 100% per tutta la larghezza */
+    border: none;            
+    border-top: 2px solid #EFE3C2; 
+    margin: 1rem 0;              
+    width: 50%;                      
     }
     .grafico {
     float: left;
     margin: 0 1rem 1rem 0;
-    max-width: 100%;           /* o max-width: 100% per responsività */
+    max-width: 100%;           
     }
     p {
-      text-align: justify;              /* Altezza riga per i paragrafi */
+      text-align: justify;              
     }
     .under-graphic {
     clear: left;
-    width: 60%;            /* oppure clear: both; se hai fluttuazioni su entrambi i lati */
+    width: 60%;            
     }
 
     .small-text {
-    font-size: 0.75rem;    /* 75% di 16px = 12px */
+    font-size: 0.75rem;    
     color: #555;
     margin-top: 0.25rem;
    }
-    /* ––– contesto flex per grafico + descrizione ––– */
+    
     .chart-container {
       display: flex;
-      align-items: flex-start;   /* allinea in alto */
-      gap: 1rem;                 /* spazio orizzontale */
+      align-items: flex-start;   
+      gap: 1rem;                 
       margin-bottom: 1.5rem;
     }
-    /* rimuovi float precedenti: usa solo responsive width */
+    
     .chart-container img {
-      max-width: 50%;            /* metà larghezza del contenitore */
+      max-width: 50%;            
       height: auto;
       display: block;
     }
     .chart-desc {
-      max-width: 45%;            /* lasci spazio al grafico */
+      max-width: 45%;            
       text-align: justify;
       line-height: 1.5;
       font-size: 1rem;
       color: #333;
     }
 
-    /* su schermi stretti metti la descrizione sotto */
+    
     @media (max-width: 600px) {
       .chart-container {
         flex-direction: column;
@@ -103,10 +102,10 @@
   </style>
 </head>
 <body>
-    <!-- Titolo principale -->
+
   <h1>Welcome in the Ticino Pollution project</h1>
 
-  <!-- Sottotitolo -->
+  
   <h2>Mean monthly traffic heatmap</h2>
   <hr class="separator">
 
@@ -117,14 +116,12 @@
     aria-describedby="chartDescription"
   >
 
-  <!-- IL CONTENITORE VERO: qui mettiamo l’ID -->
   <div class="chart-desc" id="chartDescription1">
     Caricamento descrizione…
   </div>
 </div>
 
 <script>
-  // deve trovare il div con quell’ID, non il tag script
   fetch('pacchetto_python/docs/traffic-2025-06-12.html')
     .then(res => res.text())
     .then(html => {
@@ -151,14 +148,12 @@
     aria-describedby="chartDescription"
   >
 
-  <!-- IL CONTENITORE VERO: qui mettiamo l’ID -->
   <div class="chart-desc" id="chartDescription2">
     Caricamento descrizione…
   </div>
 </div>
 
 <script>
-  // deve trovare il div con quell’ID, non il tag script
   fetch('pacchetto_python/docs/ALL-2025-06-12.html')
     .then(res => res.text())
     .then(html => {
@@ -184,14 +179,12 @@
     aria-describedby="chartDescription"
   >
 
-  <!-- IL CONTENITORE VERO: qui mettiamo l’ID -->
   <div class="chart-desc" id="chartDescription3">
     Caricamento descrizione…
   </div>
 </div>
 
 <script>
-  // deve trovare il div con quell’ID, non il tag script
   fetch('pacchetto_python/docs/no2-2025-06-12.html')
     .then(res => res.text())
     .then(html => {
@@ -217,14 +210,12 @@
     aria-describedby="chartDescription"
   >
 
-  <!-- IL CONTENITORE VERO: qui mettiamo l’ID -->
   <div class="chart-desc" id="chartDescription4">
     Caricamento descrizione…
   </div>
 </div>
 
 <script>
-  // deve trovare il div con quell’ID, non il tag script
   fetch('pacchetto_python/docs/monte_growth_bioggio-2025-06-12.html')
     .then(res => res.text())
     .then(html => {
