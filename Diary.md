@@ -55,7 +55,7 @@
 
 **Date:** May 11–13, 2025
 
-**Actioned via:** Script A (`data_anal.ipynb`)
+**Actioned via:** Script A (`data_analysis.ipynb`)
 
 **Steps performed:**
 
