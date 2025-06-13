@@ -26,6 +26,7 @@
 ### **Phase 1: Problem Definition**
 
 **Date:** May 7, 2025
+
 **Goal:** Analyze the relationship between road traffic and atmospheric pollutants in Canton Ticino, with the possibility to generate future scenarios using simulations.
 **Decision:** Develop a modular Python package with potential extensions such as a web front end or automatic analysis descriptions via a local LLM.
 
@@ -34,6 +35,7 @@
 ### **Phase 2: Data Search & Selection**
 
 **Date:** May 8–10, 2025
+
 **Initial approach:** Attempted collection from Swiss environmental portals using web scraping.
 **Issues encountered:**
 
@@ -52,7 +54,9 @@
 ### **Phase 3: Data Preparation & Cleaning**
 
 **Date:** May 11–13, 2025
+
 **Actioned via:** Script A (`data_anal.ipynb`)
+
 **Steps performed:**
 
 * Imported all CSV files from various folders
@@ -72,6 +76,7 @@
 ### **Phase 4: Initial Correlation Analysis**
 
 **Date:** May 14–16, 2025
+
 **Objective:** Check for linear correlation between pollutants and traffic levels
 
 **Findings:**
@@ -89,6 +94,7 @@
 ### **Phase 5: Incorporation of Meteorological Variables**
 
 **Date:** May 17–18, 2025
+
 **Action:** Download weather data (temperature, pressure, humidity, wind) for each station from official sources
 
 **Result:**
@@ -101,6 +107,7 @@
 ### **Phase 6: Weather Data Licensing Issue**
 
 **Date:** May 19, 2025
+
 **Problem:** Meteorological data cannot be redistributed in raw form
 
 **Solution:**
@@ -113,6 +120,7 @@
 ### **Phase 7: Development of `Monte_verita_simulation()`**
 
 **Date:** May 20–24, 2025
+
 **Created:** The core Monte Carlo simulation function
 
 **Features:**
@@ -132,7 +140,7 @@
 * Modular design for future enhancements
 
 ---
-### **Phase 8: Project refining and final testing
+### Phase 8: Project refining and final testing
 
 **Date:** June, 2025
 **LLM + frontend implementation** 
