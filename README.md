@@ -11,3 +11,18 @@ The project showcases how a combination of modern programming tools and statisti
 
 ---
 Link to Github pages https://a-bianchini.github.io/project-programmingII/
+
+---
+### Repository structure
+
+```text
+project-programmingII/
+├── pacchetto_python/
+│   ├── …           (notebook e/o moduli Python)
+│   └── …
+├── Diary.md
+├── README.md
+├── User guide.md
+└── index.html
+```
+
