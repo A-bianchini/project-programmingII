@@ -1,4 +1,4 @@
-# Project-programmingII: implementing spatial data in analysing scenarios and front-end representation
+# Ticino pollution project
 The repository contains the following items:
 -
 -
