@@ -18,11 +18,11 @@ Link to Github pages https://a-bianchini.github.io/project-programmingII/
 ```text
 project-programmingII/
 ├── pacchetto_python/
-│   ├── dist
-│   ├── docs
-│   ├── graphics
-│   ├── traffico_ticino.egg-info
-│   ├── traffico_ticino
+│   ├── dist/
+│   ├── docs/
+│   ├── graphics/
+│   ├── traffico_ticino.egg-info/
+│   ├── traffico_ticino/
 │   ├── LICENSE
 │   ├── MANIFEST.in
 │   ├── README.md
