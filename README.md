@@ -18,8 +18,17 @@ Link to Github pages https://a-bianchini.github.io/project-programmingII/
 ```text
 project-programmingII/
 ├── pacchetto_python/
-│   ├── …           (notebook e/o moduli Python)
-│   └── …
+│   ├── dist
+│   ├── docs
+│   ├── graphics
+│   ├── traffico_ticino.egg-info
+│   ├── traffico_ticino
+│   ├── LICENSE
+│   ├── MANIFEST.in
+│   ├── README.md
+│   ├── notebook.ipynb
+│   ├── pyproject.toml
+│   └── setup.py
 ├── Diary.md
 ├── README.md
 ├── User guide.md
